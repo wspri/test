@@ -2,15 +2,15 @@
 % clear all;close all;clc;
 % load train.txt;
 
-inputSeries = tonndata(inputn,true,false);%½«ÑµÁ·Êı¾İ×ª»»ÎªÉñ¾­ÍøÂç¿ÉÓÃµÄ±ê×¼½á¹¹
+inputSeries = tonndata(inputn,true,false);%å°†è®­ç»ƒæ•°æ®è½¬æ¢ä¸ºç¥ç»ç½‘ç»œå¯ç”¨çš„æ ‡å‡†ç»“æ„
 targetSeries = tonndata(outputn,true,false);
 
-vad_input= tonndata(inputn_test,true,false);%½«²âÊÔÊı¾İ×ª»»ÎªÉñ¾­ÍøÂç¿ÉÓÃµÄ±ê×¼½á¹¹
+vad_input= tonndata(inputn_test,true,false);%å°†æµ‹è¯•æ•°æ®è½¬æ¢ä¸ºç¥ç»ç½‘ç»œå¯ç”¨çš„æ ‡å‡†ç»“æ„
 vad_output= tonndata(outputn_test,true,false);
 
 %%
-%´´½¨NARXÍøÂç£¬Ä¬ÈÏtan-sigmoidÎªÒş²ã×ªÒÆº¯Êı£¬linearÎªÊä³ö²ã×ªÒÆº¯Êı¡£¸ÃÍøÂçÓĞ
-%Á½¸öÊäÈë£¬Ò»¸öÊÇÍâ²¿ÊäÈë£¬Ò»¸öÊÇÊä³ö·´À¡£¨ÑµÁ·Íê³Éºó·´À¡Á¬½Ó½«±»¶Ï¿ª£©¡£
+%åˆ›å»ºNARXç½‘ç»œï¼Œé»˜è®¤tan-sigmoidä¸ºéšå±‚è½¬ç§»å‡½æ•°ï¼Œlinearä¸ºè¾“å‡ºå±‚è½¬ç§»å‡½æ•°ã€‚è¯¥ç½‘ç»œæœ‰
+%ä¸¤ä¸ªè¾“å…¥ï¼Œä¸€ä¸ªæ˜¯å¤–éƒ¨è¾“å…¥ï¼Œä¸€ä¸ªæ˜¯è¾“å‡ºåé¦ˆï¼ˆè®­ç»ƒå®Œæˆååé¦ˆè¿æ¥å°†è¢«æ–­å¼€ï¼‰ã€‚
 inputDelays=1:2;
 feedbackDelays=1:2;
 hiddenLayerSize=10;
